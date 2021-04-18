@@ -1,5 +1,5 @@
-# php mvc boilerplate
-This repo contains a very simple, very basic skelleton for MVC projects.
+# COGIP BECODE PROJECT
 
-This is only meant for educational purposes, not to be used in real life projects!
+
+
 
