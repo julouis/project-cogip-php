@@ -5,16 +5,29 @@ require_once('./Model/LoginManager.php');
 
 class LoginController
 {
-    //render function with both $_GET and $_POST vars available if it would be needed.
-    public function render()
+    public function render(array $GET, array $POST)
     {
-        //this is just example code, you can remove the line below
-        $result = new LoginManager();
+       
+        $login = new LoginManager();
 
-        //you should not echo anything inside your controller - only assign vars here
-        // then the view will actually display them.
 
-        //load the view
+        function checkInput($var)
+        {
+            $var = trim($var);
+            $var = stripslashes($var);
+            $var = htmlspecialchars($var);
+            return $var;
+        }
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $success = true;
+
+            $username = checkInput($_POST["username"]);
+            $password = checkInput($_POST["pass"]);
+            $data = $login->verifyUsername($username);
+        }
+
+
         require('./View/login.php');
     }
 }
