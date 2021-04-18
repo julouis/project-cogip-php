@@ -7,7 +7,7 @@ require_once('./Model/RegisterManager.php');
 class RegisterController
 {
     //render function with both $_GET and $_POST vars available if it would be needed.
-    public function render(array $_GET, array $_POST)
+    public function render(array $GET, array $POST)
     {
 
         $register = new RegisterManager();
@@ -37,11 +37,6 @@ class RegisterController
             }
 
 
-        /* if ($register->verifyUsername()) {
-                $success = false;
-                echo "This email address already exists";
-            }*/
-
             if (!isset($registerPassword)||empty($registerPassword)){
                 $success=false;
                 echo "Please enter a password";
@@ -52,6 +47,7 @@ class RegisterController
                 echo "Passwords don't match";
             }
 
+            /* NEW USER */
             if($success){
                 $register-> setRegister();
             }
