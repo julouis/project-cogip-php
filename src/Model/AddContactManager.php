@@ -12,10 +12,7 @@ class AddContactManager extends Manager
         $db = $this->connectDb();
 
         try {
-            $result = $db->prepare(
-                'INSERT INTO `Contacts` (contactName, phoneNumber, email, company)
-                VALUES("'. $_POST["addContactName"] . '","'. $_POST["addContactPhoneNumber"] . '","'. $_POST["AddContactEmail"] . '","'. $_POST["AddContactCompanyName"] . '")'
-            );
+            $result = $db->prepare('INSERT INTO `Contacts` (contactName, phoneNumber, email, company) VALUES("' . $_POST["addContactName"] . '", "' . $_POST["addContactPhoneNumber"] . '", "' . $_POST["AddContactEmail"] . '", "' . $_POST["AddContactCompanyName"] . '")');
             $result->execute();
         } catch (Exception $error) {
             die("Error : " . $error->getMessage());

@@ -7,24 +7,24 @@ require_once('./Model/AddContactManager.php');
 class AddContactController
 {
     
-    public function render() 
+    public function render(array $GET, array $POST) 
     {
         
         $result = new AddContactManager();
 
-        function checkInput($var)
+/*         function checkInput($var)
         {
             $var = trim($var);
             $var = stripslashes($var);
             $var = htmlspecialchars($var);
             return $var;
-        }
+        } */
 
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $success=true;
 
             if($success){
-                $result->setContact();
+                $result-> setContact();
             }
 
         }
