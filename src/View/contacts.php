@@ -17,7 +17,6 @@ Anything complex should be calculated in the model -->
 		<?php } ?>
 	</ol>
 
-
-
+	<a href="/index.php?link=addContact"><button type="button" class="btn btn-primary">Add a contact</button></a>
 </section>
 <?php require 'includes/footer.php' ?>

@@ -9,6 +9,7 @@ require './Controller/InvoicesController.php';
 require './Controller/CompaniesController.php';
 require './Controller/ContactsController.php';
 require './Controller/RegisterController.php';
+require './Controller/AddContactController.php';
 
 //Your index is your Router. You could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 
@@ -26,6 +27,8 @@ if(isset($_GET['link']) && $_GET['link'] === 'invoices'){
     $controller = new LoginController();
 } elseif (isset($_GET['link']) && $_GET['link'] === 'register'){
     $controller = new RegisterController();
+} elseif (isset($_GET['link']) && $_GET['link'] === 'addContact') {
+    $controller = new AddContactController();
 }
 
 $controller->render($_GET,$_POST);

@@ -17,7 +17,7 @@ Anything complex should be calculated in the model -->
 		<?php } ?>
 	</ol>
 
-
+	<a href=""><button type="button" class="btn btn-primary">Add a invoice</button></a>
 
 </section>
 <?php require 'includes/footer.php' ?>

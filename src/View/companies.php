@@ -17,6 +17,7 @@ Anything complex should be calculated in the model -->
 		<?php } ?>
 	</ol>
 
+	<a href=""><button type="button" class="btn btn-primary">Add a company</button></a>
 
 
 </section>
