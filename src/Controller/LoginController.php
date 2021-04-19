@@ -24,7 +24,19 @@ class LoginController
 
             $username = checkInput($_POST["username"]);
             $password = checkInput($_POST["pass"]);
-            $data = $login->verifyUsername($username);
+            $data = $login->getLogin($username);
+
+            if (!isset($registerMail) || empty($registerMail)) {
+                $success = false;
+                echo "Please enter your email address to log-in";
+            }
+
+            if(!isset($password) || empty($password)){
+                $success = false;
+                echo "Please enter your password";
+            }
+
+            
         }
 
 
