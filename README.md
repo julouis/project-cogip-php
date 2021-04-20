@@ -24,7 +24,9 @@
 ### Team
 
 François Royen
+
 Laetitia Gullo
+
 Julien Louis
     
 
