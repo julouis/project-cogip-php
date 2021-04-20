@@ -6,18 +6,18 @@ require_once('Manager.php');
 class LoginManager extends Manager
 {
     // all companies
-    public function getLogin()
+    public function getLogin($username)
     {
-        
-
-        $username = $_POST["username"];
-        $password = $_POST["passworld"];
-
         $db = $this->connectDb();
 
-        $db->query("INSERT INTO Users(id, username, pass) VALUE('', $username, $password) ");
-
+        try {
+            $result = $db->prepare("SELECT * FROM Users WHERE username = :username");
+            $result->execute(["username"=>$username]);
+            return $result -> fetch();
         
+        } catch (Exception $e) {
+            die("Error : " . $e->getMessage());
+        }
     }
 
 }
