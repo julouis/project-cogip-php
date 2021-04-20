@@ -3,7 +3,7 @@
 <main id="login">
     <div class="container">
         <section id="content">
-            <form method="post" action="index.php?link=register">
+            <form method="POST" action="index.php?link=register">
                 <h1>Register Form <?php if(isset($test)){ echo $test;} ?></h1>
                 <div>
                     <input type="email" placeholder="Email" required="" id="username" name="registerMail" />

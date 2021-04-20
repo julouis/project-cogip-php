@@ -2,7 +2,7 @@
 
 <h2>Add a contact form</h2>
 
-<form>
+<form method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1"> Contact Name</label>
     <input type="text" name="addContactName" required class="form-control" id="exampleInputEmail1" placeholder="Enter name">
